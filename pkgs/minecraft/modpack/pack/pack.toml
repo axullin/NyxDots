@@ -1,0 +1,13 @@
+name = "nivel"
+author = "axullin"
+version = "1.0.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "037440a6d302da35cbed400fe77558a65737a063039b01ef14b0c1385c2cb7d3"
+
+[versions]
+fabric = "0.19.3"
+minecraft = "1.21.1"

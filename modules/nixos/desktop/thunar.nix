@@ -1,0 +1,16 @@
+{
+  flake.modules.nixos.desktop =
+    { pkgs, ... }:
+    {
+      programs.thunar = {
+        enable = true;
+        plugins = with pkgs; [
+          thunar-volman
+          thunar-archive-plugin
+        ];
+      };
+
+      services.gvfs.enable = true;
+      services.tumbler.enable = true;
+    };
+}
