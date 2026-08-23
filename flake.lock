@@ -33,6 +33,22 @@
         "type": "github"
       }
     },
+    "assets": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1787514595,
+        "narHash": "sha256-89UBS/OQH6tJoskX+rBPP89+pD3VxUvaRj+CATcIQz0=",
+        "owner": "axullin",
+        "repo": "assets",
+        "rev": "0f072f6eb8964fb12407f7fd221dae90093cffb4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "axullin",
+        "repo": "assets",
+        "type": "github"
+      }
+    },
     "crane": {
       "locked": {
         "lastModified": 1785782307,
@@ -1145,6 +1161,7 @@
     },
     "root": {
       "inputs": {
+        "assets": "assets",
         "den": "den",
         "disko": "disko",
         "fetch": "fetch",

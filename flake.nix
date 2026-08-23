@@ -49,6 +49,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-parts.follows = "flake-parts";
     };
+    assets = {
+      url = "github:axullin/assets";
+      flake = false;
+    };
     den.url = "github:denful/den";
     import-tree.url = "github:vic/import-tree";
     sops-nix.url = "github:Mic92/sops-nix";

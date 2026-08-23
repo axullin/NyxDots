@@ -3,10 +3,11 @@
     {
       pkgs,
       config,
+      inputs,
       ...
     }:
     let
-      wallpaper = ../../../assets/wallpapers/waterfall.png;
+      wallpaper = "${inputs.assets}/wallpapers/waterfall.png";
 
       palette = ''
         * {

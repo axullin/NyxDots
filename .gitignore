@@ -1,7 +1,3 @@
 # Nix build outputs
 result
 result-*
-
-# Wallpapers 
-assets/wallpapers/*
-!assets/wallpapers/waterfall.png

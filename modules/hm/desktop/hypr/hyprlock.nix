@@ -4,6 +4,7 @@
       pkgs,
       config,
       lib,
+      inputs,
       ...
     }:
     let
@@ -14,7 +15,7 @@
       subtext = "rgba(9a9a9aff)";
       inputBg = "rgba(000000aa)";
 
-      wallpaper = ../../../../assets/wallpapers/waterfall.png;
+      wallpaper = "${inputs.assets}/wallpapers/waterfall.png";
 
       serif = "Garamond Libre";
       mono = "JetBrainsMono Nerd Font";

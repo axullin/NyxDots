@@ -1,5 +1,6 @@
 {
   flake.modules.homeManager.terminal =
+    { inputs, ... }:
     let
       top = "#C5E2F7";
       middle = "#92BAD2";
@@ -11,7 +12,7 @@
         settings = {
 
           logo = {
-            source = ../../../assets/icons/cat-ascii.txt;
+            source = "${inputs.assets}/icons/cat-ascii.txt";
             # type = "kitty-direct";
             # width = 25;
             padding = {

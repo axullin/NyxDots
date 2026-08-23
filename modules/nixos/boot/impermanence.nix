@@ -66,12 +66,12 @@
             directories = [
               "Downloads"
               "Music"
-              "Wallpapers"
               "Documents"
               "Videos"
               "Projects"
               "Pictures"
               "Notes"
+              "Assets"
               ".ssh"
             ]
             ++ cfg.impermanence.home.directories;
