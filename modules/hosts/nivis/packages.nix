@@ -14,10 +14,14 @@
 
           # editors & dev
           claude-code
+          cursor-cli
           reaper
 
           # cli
+          agent-browser
+          ast-grep
           btop
+          jq
           tree
           unzip
           yazi

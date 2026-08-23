@@ -43,6 +43,8 @@
                 ".config/discord"
                 ".config/Vencord"
                 ".steam"
+                ".cursor"
+                ".config/cursor"
                 ".local/share/Steam"
                 ".local/share/osu"
                 ".local/share/Celeste"
