@@ -25,7 +25,7 @@
           "LC_PAPER"
           "LC_TELEPHONE"
           "LC_TIME"
-        ] (_: "pl_PL.UTF-8");
+        ] (_: "en_US.UTF-8");
       };
 
       users = {

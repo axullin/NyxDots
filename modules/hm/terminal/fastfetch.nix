@@ -16,7 +16,7 @@
             # type = "kitty-direct";
             # width = 25;
             padding = {
-              left = 0;
+              left = 2;
               top = 1;
             };
             color = {

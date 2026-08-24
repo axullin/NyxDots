@@ -60,7 +60,7 @@
     impermanence.url = "github:nix-community/impermanence";
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
-    noctalia.url = "github:noctalia-dev/noctalia/cachix";
+    noctalia.url = "github:noctalia-dev/noctalia/";
     nixvim.url = "github:nix-community/nixvim";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     fetch.url = "github:areofyl/fetch";
