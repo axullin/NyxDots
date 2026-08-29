@@ -8,11 +8,7 @@
       ];
 
       nyx.desktop.hyprland.enable = true;
-      nyx.desktop.noctalia = {
-        enable = true;
-        theme.mode = "dark";
-        bar.position = "top";
-      };
+      nyx.desktop.noctalia.enable = true;
 
       home.stateVersion = "26.05";
     };

@@ -2,6 +2,7 @@
   flake.modules.homeManager.desktop =
     {
       pkgs,
+      lib,
       config,
       inputs,
       ...
@@ -20,7 +21,7 @@
         }
       '';
     in
-    {
+    lib.mkIf (!config.nyx.desktop.noctalia.enable) {
       programs.rofi = {
         enable = true;
         font = "JetBrainsMono Nerd Font 16";

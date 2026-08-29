@@ -29,7 +29,7 @@
       '';
     in
     {
-      config = lib.mkIf cfg.enable {
+      config = lib.mkIf (cfg.enable && !config.nyx.desktop.noctalia.enable) {
         programs.hyprlock = {
           enable = true;
           settings = {

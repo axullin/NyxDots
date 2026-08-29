@@ -3,6 +3,12 @@
     { lib, config, ... }:
     let
       cfg = config.nyx.desktop.hyprland;
+
+      lockCmd =
+        if config.nyx.desktop.noctalia.enable then
+          "noctalia msg session lock"
+        else
+          "pidof hyprlock || hyprlock";
     in
     {
       config = lib.mkIf cfg.enable {
@@ -10,7 +16,7 @@
           enable = true;
           settings = {
             general = {
-              lock_cmd = "pidof hyprlock || hyprlock";
+              lock_cmd = lockCmd;
               before_sleep_cmd = "loginctl lock-session";
               after_sleep_cmd = "hyprctl dispatch dpms on";
             };

@@ -5,34 +5,18 @@
       lib,
       config,
       inputs,
+      userName,
       ...
     }:
     let
       cfg = config.nyx.desktop.noctalia;
+
+      wallpaperDir = "/home/${userName}/Assets/wallpapers";
+      defaultWallpaper = "${wallpaperDir}/waterfall-monochrome.png";
     in
     {
       options.nyx.desktop.noctalia = {
-        enable = lib.mkEnableOption "the Noctalia desktop shell";
-
-        theme.mode = lib.mkOption {
-          type = lib.types.enum [
-            "dark"
-            "light"
-          ];
-          default = "dark";
-          description = "Noctalia theme mode.";
-        };
-
-        bar.position = lib.mkOption {
-          type = lib.types.enum [
-            "top"
-            "bottom"
-            "left"
-            "right"
-          ];
-          default = "top";
-          description = "Noctalia bar position.";
-        };
+        enable = lib.mkEnableOption "enable the Noctalia desktop shell";
       };
 
       imports = [ inputs.noctalia.homeModules.default ];
@@ -43,8 +27,45 @@
           package = inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default;
           systemd.enable = true;
           settings = {
-            theme.mode = cfg.theme.mode;
-            bar.position = cfg.bar.position;
+            accessibility.ui_scale = 1.35;
+
+            bar.default = {
+              background_opacity = 0.65;
+              margin_edge = 6;
+              margin_ends = 8;
+              radius = 6;
+              scale = 1.3;
+              shadow = false;
+              thickness = 45;
+              widget_spacing = 8;
+            };
+
+            shell = {
+              avatar_path = "/home/${userName}/Assets/icons/niko-oneshot.png";
+              font_family = "JetBrainsMono NF";
+              popup_shadows = false;
+              screen_corners = {
+                enabled = true;
+                size = 16;
+              };
+              shadow.alpha = 0.0;
+            };
+
+            theme = {
+              builtin = "";
+              community_palette = "";
+              pure_black_dark = true;
+              source = "wallpaper";
+              wallpaper_scheme = "m3-rainbow";
+            };
+
+            wallpaper = {
+              directory = wallpaperDir;
+              transition = [ "wipe" ];
+              transition_on_startup = true;
+              default.path = defaultWallpaper;
+              monitors."DP-1".path = defaultWallpaper;
+            };
           };
         };
       };
