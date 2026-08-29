@@ -18,6 +18,10 @@
       ];
 
       nyx = {
+        desktop = {
+          hyprland.enable = true;
+        };
+
         boot = {
           cachyosKernel.enable = true;
           secure-boot.enable = true;
